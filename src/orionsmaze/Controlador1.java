@@ -37,9 +37,9 @@ public class Controlador1 {
     public void handle(KeyEvent event){
         
           String code = event.getCode().toString();
-                    if(!ventana.getKeyPresses().contains(code)){
+            if(!ventana.getKeyPresses().contains(code)){
                         ventana.getKeyPresses().add(code);
-                    }
+            }
             if (ventana.getKeyPresses().contains("RIGHT")){
                 ventana.getBg().moveLeft();//bg se mueve invertido
                 //Hacer aqui que los objetos se muevan
@@ -59,12 +59,10 @@ public class Controlador1 {
     public void handle(KeyEvent event){
         
           String code = event.getCode().toString();
-                    if(!ventana.getKeyPresses().contains(code)){
+                    if(ventana.getKeyPresses().contains(code)){
                         ventana.getKeyPresses().remove(code);
                     }
+        }
     }
-    
-    
-}
 }
 

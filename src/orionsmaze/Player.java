@@ -12,9 +12,10 @@ import javafx.scene.image.Image;
  * @author Gloria
  */
 public class Player extends Movable {
-    private Image right = new Image("image/right0.png");
-    private Image left = new Image("image/left0.png");
-    private Image front = new Image("image/down1.png");
+    private Image right = new Image("Images/right0.png");
+    private Image left = new Image("Images/left0.png");
+    private Image front = new Image("Images/down1.png");
+    private Image sprite;
 
     public Player(int xPos, int yPos, Image sprite) {
         super(xPos, yPos, sprite);
@@ -33,11 +34,6 @@ public class Player extends Movable {
     
     public void reset(){
         sprite = front;
-    }
-
-    @Override
-    public void run() {
-        System.out.println("kek");
     }
 
     public Image getRight() {

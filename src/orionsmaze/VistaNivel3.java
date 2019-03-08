@@ -17,15 +17,19 @@ import javafx.stage.Stage;
  *
  * @author Laura M
  
-
+**/
 public class VistaNivel3 extends Vista{
 
 
     public VistaNivel3() {
         
     }
+
+    @Override
+    public void handle(long now) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     
 }
-*/
