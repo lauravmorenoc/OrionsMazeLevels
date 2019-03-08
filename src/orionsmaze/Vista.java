@@ -54,7 +54,7 @@ public abstract class Vista extends AnimationTimer{
         this.pencil = canvas.getGraphicsContext2D();
         this.layout = new Pane();
         this.canvas = new Canvas();
-        this.keyPresses= null;
+        this.keyPresses= new ArrayList<>();
     }
     
     
