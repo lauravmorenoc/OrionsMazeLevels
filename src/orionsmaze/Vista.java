@@ -45,6 +45,8 @@ public abstract class Vista extends AnimationTimer{
     protected int frames;
 
     public Vista() {
+        this.objetos=new ArrayList<>();
+        this.enemigos=new ArrayList<>();
         this.layout = new Pane();             
         this.canvas = new Canvas(800, 512); 
         layout.getChildren().add(canvas); 
@@ -60,8 +62,8 @@ public abstract class Vista extends AnimationTimer{
     public void mostrar(Stage stage) {
       stage.setTitle("Orion's Maze");
      //Comprobado System.out.println("Hasta aqui esta bien");
+      this.start();
       stage.setScene(this.scene);
-     //Comprobado System.out.println("Hasta aquí bien");
       stage.show();
    }
 
