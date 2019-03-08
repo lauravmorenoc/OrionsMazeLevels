@@ -32,6 +32,7 @@ public class Controlador1 {
     }
     
     
+    
     class ToPressKeyEvent implements EventHandler<KeyEvent>{
     @Override
     public void handle(KeyEvent event){
@@ -47,10 +48,13 @@ public class Controlador1 {
                 }
             }
             if (ventana.getKeyPresses().contains("LEFT")){
+                if(ventana.getBg().xPos!=0){
                 ventana.getBg().moveRight();//bg se mueve invertido
                 for(StaticObject object:ventana.getObjetos()){
                     object.moveRight();
-                }            }
+                }   
+              }
+            }
             if (ventana.getKeyPresses().contains("UP")){
                 ventana.getPlayer().jump();
             }
