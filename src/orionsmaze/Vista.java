@@ -59,7 +59,9 @@ public abstract class Vista extends AnimationTimer{
     
     public void mostrar(Stage stage) {
       stage.setTitle("Orion's Maze");
-      stage.setScene(scene);
+     //Comprobado System.out.println("Hasta aqui esta bien");
+      stage.setScene(this.scene);
+     //Comprobado System.out.println("Hasta aquí bien");
       stage.show();
    }
 

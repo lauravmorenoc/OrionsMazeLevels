@@ -22,16 +22,18 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Laura M
+ * @author Laura M //Biometria hemática y una química sanguínea cada 6-8 meses
  */
 public class VistaNivel1 extends Vista{
 
     public VistaNivel1(){
-        this.bg=new Background(0, 0, new Image("fondoN1.jpg"));
+        this.bg=new Background(0, 0, new Image("Images/fondoN1.jpg"));
     }
     
+    @Override
     public void handle(long now){
-      //  StaticObject plataforma=new StaticObject();
+        StaticObject plataforma=new StaticObject(500, 350, new Image("Images/alienfloor2_diffuse.jpg"));
+        this.objetos.add(plataforma);
         if(frames % 3 == 0){
             pencil.clearRect(0, 0, 2000, 2000);
             pencil.drawImage(bg.getSprite(), bg.getxPos(), bg.getyPos());

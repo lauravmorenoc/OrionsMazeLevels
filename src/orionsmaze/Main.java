@@ -15,7 +15,13 @@ public class Main extends Application{
 @Override
     public void start(Stage stage) throws Exception {
     
-    
+        Singleton  singleton= Singleton.getSingleton();
+        singleton.setStage(stage);
+        
+        Modelo modelo=new Modelo();
+        Controlador1 vista=new Controlador1(modelo);
+        vista.mostrarVista();
+        //Comprobado System.out.println("Hasta aqui pos bien");
     }
 
     public static void main(String[] args) {

@@ -23,8 +23,14 @@ public class Controlador1 {
         this.ventana=new VistaNivel1();
         this.modelo=modelo;
         this.ventana.getScene().setOnKeyPressed(new ToPressKeyEvent());
-        
+        this.ventana.getScene().setOnKeyReleased(new ToReleaseKeyEvent());
     }
+    
+    public void mostrarVista(){
+        Singleton singleton=Singleton.getSingleton();
+        this.ventana.mostrar(singleton.getStage());
+    }
+    
     
     class ToPressKeyEvent implements EventHandler<KeyEvent>{
     @Override
