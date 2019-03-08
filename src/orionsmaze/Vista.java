@@ -31,6 +31,7 @@ import javafx.stage.Stage;
 public abstract class Vista extends AnimationTimer{
     protected Scene scene;
     protected Background bg;
+    protected Background bgInverted;
     protected Button reintentar;
     protected Button salir;
     protected Button continuar;
@@ -173,6 +174,14 @@ public abstract class Vista extends AnimationTimer{
 
     public void setEnemigos(ArrayList<Enemy> enemigos) {
         this.enemigos = enemigos;
+    }
+
+    public Background getBgInverted() {
+        return bgInverted;
+    }
+
+    public void setBgInverted(Background bgInverted) {
+        this.bgInverted = bgInverted;
     }
     
     

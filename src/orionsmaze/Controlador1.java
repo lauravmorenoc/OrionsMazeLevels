@@ -43,6 +43,7 @@ public class Controlador1 {
             }
             if (ventana.getKeyPresses().contains("RIGHT")){
                 ventana.getBg().moveLeft();//bg se mueve invertido
+                ventana.getBgInverted().moveLeft();
                 for(StaticObject object:ventana.getObjetos()){
                     object.moveLeft();
                 }
@@ -50,6 +51,7 @@ public class Controlador1 {
             if (ventana.getKeyPresses().contains("LEFT")){
                 if(ventana.getBg().xPos!=0){
                 ventana.getBg().moveRight();//bg se mueve invertido
+                ventana.getBgInverted().moveRight();
                 for(StaticObject object:ventana.getObjetos()){
                     object.moveRight();
                 }   

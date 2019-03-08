@@ -28,6 +28,7 @@ public class VistaNivel1 extends Vista{
 
     public VistaNivel1(){
         this.bg=new Background(0, 0, new Image("Images/fondoN1.jpg"));
+        this.bgInverted=new Background(0, 0, new Image("Images/fondoN1invertido.jpg"));
         this.player = new Player(300, 600, new Image("Images/down1.png"));
         StaticObject plataforma=new StaticObject(500, 350, new Image("Images/alienfloor2_diffuse.jpg"));
         this.objetos.add(plataforma);
@@ -40,14 +41,20 @@ public class VistaNivel1 extends Vista{
         
         if(frames % 2 == 0){
             pencil.clearRect(0, 0, 2000, 2000);
-            pencil.drawImage(bg.getSprite(), bg.getxPos(), bg.getyPos());
+            for(int n=0; n<5; n++){
+            if(n%2==0){
+            pencil.drawImage(bg.getSprite(), bg.getxPos()+(1919*n), bg.getyPos());
+            } else pencil.drawImage(bgInverted.getSprite(), bgInverted.getxPos()+(1919*n), bgInverted.getyPos());
+
+            }
             for(StaticObject object:this.objetos){
                 if(object.getRangoX()[1]>=0)
                 pencil.drawImage(object.getSprite(), object.getxPos(), object.getyPos());
             }
             //Hacer lo mismo para todos los objetos que van en el nivel
             pencil.drawImage(player.getSprite(), player.getxPos(), player.getyPos());
-
+             
+            
         }
         frames++;
         if(frames == 5) frames = 0;
