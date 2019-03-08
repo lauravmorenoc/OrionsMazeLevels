@@ -42,12 +42,15 @@ public class Controlador1 {
             }
             if (ventana.getKeyPresses().contains("RIGHT")){
                 ventana.getBg().moveLeft();//bg se mueve invertido
-                //Hacer aqui que los objetos se muevan
+                for(StaticObject object:ventana.getObjetos()){
+                    object.moveLeft();
+                }
             }
             if (ventana.getKeyPresses().contains("LEFT")){
                 ventana.getBg().moveRight();//bg se mueve invertido
-                //Hacer aqui que los objetos se muevan
-            }
+                for(StaticObject object:ventana.getObjetos()){
+                    object.moveRight();
+                }            }
             if (ventana.getKeyPresses().contains("UP")){
                 ventana.getPlayer().jump();
             }

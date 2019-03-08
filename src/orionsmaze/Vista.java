@@ -158,6 +158,22 @@ public abstract class Vista extends AnimationTimer{
     public Scene getScene() {
         return scene;
     }
+
+    public ArrayList<StaticObject> getObjetos() {
+        return objetos;
+    }
+
+    public void setObjetos(ArrayList<StaticObject> objetos) {
+        this.objetos = objetos;
+    }
+
+    public ArrayList<Enemy> getEnemigos() {
+        return enemigos;
+    }
+
+    public void setEnemigos(ArrayList<Enemy> enemigos) {
+        this.enemigos = enemigos;
+    }
     
     
 }

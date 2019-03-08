@@ -29,7 +29,6 @@ public class VistaNivel1 extends Vista{
     public VistaNivel1(){
         this.bg=new Background(0, 0, new Image("Images/fondoN1.jpg"));
         this.player = new Player(300, 600, new Image("Images/down1.png"));
-        System.out.println("Se inicializa el background");
         StaticObject plataforma=new StaticObject(500, 350, new Image("Images/alienfloor2_diffuse.jpg"));
         this.objetos.add(plataforma);
     }
