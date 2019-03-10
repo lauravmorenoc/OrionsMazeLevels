@@ -13,8 +13,8 @@ import javafx.scene.image.Image;
  */
 public class Enemy extends Movable implements Runnable {
 
-    public Enemy(int xPos, int yPos, Image sprite) {
-        super(xPos, yPos, sprite);
+    public Enemy(int xPos, int yPos, int xPosFinal, int yPosFinal, Image sprite) {
+        super(xPos, yPos, xPosFinal, yPosFinal, sprite);
     }
 
     @Override

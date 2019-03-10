@@ -40,29 +40,32 @@ public abstract class Vista extends AnimationTimer{
     protected GraphicsContext pencil;
     protected Image placeholder;
     protected ArrayList<String> keyPresses; 
-    protected ArrayList<StaticObject> objetos;
+    protected StaticObject floor;
+    protected ArrayList<StaticObject> objects=new ArrayList<>();
     protected ArrayList<Enemy> enemigos;
     protected Player player;
     protected int frames;
 
+    
+    
     public Vista() {
-        this.objetos=new ArrayList<>();
+        this.objects=new ArrayList<>();
         this.enemigos=new ArrayList<>();
-        this.layout = new Pane();             
-        this.canvas = new Canvas(800, 512); 
+        this.layout = new Pane();
+        this.canvas = new Canvas(650, 406); 
         layout.getChildren().add(canvas); 
         this.scene = new Scene(layout, canvas.getWidth(), canvas.getHeight());
         this.pencil = canvas.getGraphicsContext2D();
         this.layout = new Pane();
         this.canvas = new Canvas();
-        this.keyPresses= new ArrayList<>();
+        this.keyPresses= new ArrayList<>();   
+        
     }
     
     
     
     public void mostrar(Stage stage) {
       stage.setTitle("Orion's Maze");
-     //Comprobado System.out.println("Hasta aqui esta bien");
       this.start();
       stage.setScene(this.scene);
       stage.show();
@@ -160,12 +163,12 @@ public abstract class Vista extends AnimationTimer{
         return scene;
     }
 
-    public ArrayList<StaticObject> getObjetos() {
-        return objetos;
+    public ArrayList<StaticObject> getObjects() {
+        return objects;
     }
 
-    public void setObjetos(ArrayList<StaticObject> objetos) {
-        this.objetos = objetos;
+    public void setObjects(ArrayList<StaticObject> objects) {
+        this.objects = objects;
     }
 
     public ArrayList<Enemy> getEnemigos() {
@@ -182,6 +185,14 @@ public abstract class Vista extends AnimationTimer{
 
     public void setBgInverted(Background bgInverted) {
         this.bgInverted = bgInverted;
+    }
+
+    public StaticObject getFloor() {
+        return floor;
+    }
+
+    public void setFloor(StaticObject floor) {
+        this.floor = floor;
     }
     
     

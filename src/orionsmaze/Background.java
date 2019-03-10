@@ -13,8 +13,8 @@ import javafx.scene.image.Image;
  */
 public class Background extends Movable {
 
-    public Background(int xPos, int yPos, Image sprite) {
-        super(xPos, yPos, sprite);
+    public Background(int xPos, int yPos, int xPosFinal, int yPosFinal, Image sprite) {
+        super(xPos, yPos, xPosFinal, yPosFinal, sprite);
     }
     
 }

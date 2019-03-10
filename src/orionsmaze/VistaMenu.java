@@ -59,7 +59,7 @@ public class VistaMenu extends Vista{
         
         
         
-        bg = new Background(0,0, new Image("Images/fondoN1.jpg"));
+        bg = new Background(0,0, 1800, 860, new Image("Images/fondoN1.jpg"));
         image = new ImageView(bg.getSprite());
         
         title = new Label("Orion's Maze");

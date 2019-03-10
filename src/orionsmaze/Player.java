@@ -15,10 +15,14 @@ public class Player extends Movable {
     private Image right = new Image("Images/right0.png");
     private Image left = new Image("Images/left0.png");
     private Image front = new Image("Images/down1.png");
-    private Image sprite;
-
-    public Player(int xPos, int yPos, Image sprite) {
-        super(xPos, yPos, sprite);
+    private int headWidth;
+    
+    public Player(int xPos, int yPosCabeza, int xPosFinal, int yPosFinal,int headWidth, Image sprite) {
+        super(xPos, yPosCabeza, xPosFinal, yPosFinal, sprite);
+        right = new Image("Images/right0.png");
+        left = new Image("Images/left0.png");
+        front = new Image("Images/down1.png");    
+        this.headWidth=headWidth;
     }
 
     
@@ -59,6 +63,16 @@ public class Player extends Movable {
     public void setFront(Image front) {
         this.front = front;
     }
+
+    public int getHeadHeight() {
+        return headWidth;
+    }
+
+    public void setHeadWidth(int yPosCuerpo) {
+        this.headWidth = yPosCuerpo;
+    }
     
+ 
     
+
 }

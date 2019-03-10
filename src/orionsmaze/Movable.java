@@ -14,12 +14,16 @@ import javafx.scene.image.Image;
 public abstract class Movable extends Thread {
     protected int xPos;
     protected int yPos;
+    protected int width;
+    protected int height;
     protected Image sprite;
 
-    public Movable(int xPos, int yPos, Image sprite) {
+    public Movable(int xPos, int yPos, int width, int Height, Image sprite) {
         this.xPos = xPos;
         this.yPos = yPos;
         this.sprite = sprite;
+        this.width=width;
+        this.height=width;
     }
 
     
@@ -77,6 +81,24 @@ public abstract class Movable extends Thread {
     public void setSprite(Image sprite) {
         this.sprite = sprite;
     }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setxPosFinal(int xPosFinal) {
+        this.width = xPosFinal;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setyPosFinal(int yPosFinal) {
+        this.height = yPosFinal;
+    }
+
+
     
     
 }
